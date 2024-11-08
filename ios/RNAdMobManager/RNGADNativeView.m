@@ -132,7 +132,7 @@ BOOL *nonPersonalizedAds;
         NSArray *array = [targetingOptions objectForKey:@"targets"];
         NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
         for (NSDictionary *object in array) {
-            [dic setValue:[object valueForKey:@"key"] forKey:[object valueForKey:@"value"]];
+            [dic setValue:[object valueForKey:@"value"] forKey:[object valueForKey:@"key"]];
         }
         [adRequest setCustomTargeting:dic];
     }
